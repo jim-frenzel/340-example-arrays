@@ -9,26 +9,23 @@
  * https://github.com/jim-frenzel/340-example-arrays.git
  * 
  * Simple example of "passing" arrays to functions that
- * works with the MPLAB simulator
+ * works with the MPLAB X IDE simulator, v3.65
  * 
  */
-
-// #include <stdio.h>
-// #include <stdlib.h>
 
 void my_func(unsigned * ptr)
 {
     ptr[0] += 1;    // ptr is a pointer variable pointing to element [0]
     ptr++;          // pointer now points to element [1]
     (*ptr)++;       // Dereference pointer to increment element [1]
-    // Remaining elements unmodified
+    // Modifies only two elements, relative to ptr
     }
 
 void main() {
     
     // The name of an array is a pointer constant
-    // that points to the first element in the array
-    // That is, the value of my_array is the memory address
+    // that points to the first element in the array.
+    // Thus, the value of my_array is the memory address
     // for my_array[0]
     
     unsigned my_array[]={1, 2, 3, 4};
@@ -45,4 +42,3 @@ void main() {
     while(1);
 
 }
-
